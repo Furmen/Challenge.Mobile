@@ -27,7 +27,7 @@ namespace Challenge.Mobile.ViewModels
 
         private void GoSecond(object obj)
         {
-            Application.Current.MainPage.Navigation.PushAsync(new HomePage()); //the content page you wanna load on this click event
+            Application.Current.MainPage.Navigation.PushAsync(new HomePage());
         }
 
         private void GoThird(object obj)

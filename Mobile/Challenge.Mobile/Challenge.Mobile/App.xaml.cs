@@ -17,7 +17,7 @@ namespace Challenge.Mobile
             #region DB Setters
 
             var connection = Sqlite.ConnectionDB;
-            connection.CreateTable<SiginModel>();
+            connection.CreateTable<User>();
 
             #endregion DB Setters
 

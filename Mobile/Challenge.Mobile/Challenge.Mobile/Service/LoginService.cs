@@ -29,26 +29,24 @@ namespace Challenge.Mobile.Service
 
         public void RegisterLogin(User user)
         {
-            _conn.Insert(new SiginModel
+            _conn.Insert(new User
             {
                 Password = user.Password,
-                Username = user.UserName,
-                CreateLoginDate = DateTime.Now.ToShortDateString(),
-                UpdateLoginDate = DateTime.Now.ToShortDateString()
+                UserName = user.UserName
             });
         }
 
         public User GetRegisteredCredentials()
         {
-            var hasUserCredentials = (from x in _conn.Table<SiginModel>()
+            var hasUserCredentials = (from x in _conn.Table<User>()
                                       where x.Password == _password &&
-                                            x.Username == _username
+                                            x.UserName == _username
                                       select x).LastOrDefault();
 
-            return hasUserCredentials is SiginModel ? new User
+            return hasUserCredentials is User ? new User
             {
                 Password = hasUserCredentials.Password,
-                UserName = hasUserCredentials.Username
+                UserName = hasUserCredentials.UserName
             } : null;
         }
     }

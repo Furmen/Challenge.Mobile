@@ -11,8 +11,6 @@ namespace Challenge.Mobile.ViewModels
         public string DisplayErrorMessage { get; set; }
         public User User { get; set; } = new User();
         public ICommand LoginCommand { get; set; }
-        public ICommand SignUpCommand { get; set; }
-        public ICommand GoToSignUpCommand { get; set; }
 
         public LoginPageViewModel()
         {
