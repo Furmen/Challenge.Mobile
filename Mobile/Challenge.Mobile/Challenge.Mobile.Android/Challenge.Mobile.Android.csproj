@@ -156,9 +156,6 @@
     <AndroidResource Include="Resources\drawable\ic_ShowPassword.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\ic_ShowPassword1.png" />
-  </ItemGroup>
-  <ItemGroup>
     <AndroidResource Include="Resources\drawable\ic_trophy.png" />
   </ItemGroup>
   <ItemGroup>

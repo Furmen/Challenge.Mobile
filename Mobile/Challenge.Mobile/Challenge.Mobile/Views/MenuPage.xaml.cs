@@ -21,8 +21,8 @@ namespace Challenge.Mobile
             Detail = new NavigationPage(new MainPage());
             ListMenu.ItemsSource = new List<MainMenuItem>
             {
-                new MainMenuItem{ Page= new HomePage(), MenuTitle="Home", Icon="ic_beer.png"},
-                new MainMenuItem{ Page= new LoginPage(), MenuTitle="Logout", Icon="ic_beer.png"}
+                new MainMenuItem{ Page= new HomePage(), MenuTitle="Home", Icon="ic_home.png"},
+                new MainMenuItem{ Page= new LoginPage(), MenuTitle="Logout", Icon="ic_world.png"}
             };
         }
 
