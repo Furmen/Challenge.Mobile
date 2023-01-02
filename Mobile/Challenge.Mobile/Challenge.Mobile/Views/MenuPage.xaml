@@ -1,28 +1,27 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Challenge.Mobile.MenuPage">
-    <MasterDetailPage.Master>
-        <ContentPage
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+                  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                  xmlns:Challenge.Mobile="clr-namespace:Challenge.Mobile.ViewModels"
+                  x:Class="Challenge.Mobile.MenuPage"
+                  Title="Master">
+    <ContentPage.Content
             Title="Menú"
-            BackgroundColor="#5e5a5a"
+            BackgroundColor="White"
             Padding="0,40,0,0">
+        <StackLayout>
             <Label Text="My menu" />
-            <ListView BackgroundColor="White"
-                      x:Name="ListMenu"
-                      x:ItemsSource="{Binding ListMenuItems}"
-                      ItemSelected="ListMenu_ItemSelected">
-                <ListView.ItemTemplate>
-                    <DataTemplate>
-                        <ImageCell TextColor="Black"
-                                   DetailColor="Black"
-                                   Height="25"
-                                   Text="{Binding MenuTitle}"
-                                   ImageSource="{Binding Icon}">
-                        </ImageCell>
-                    </DataTemplate>
-                </ListView.ItemTemplate>
-            </ListView>
-        </ContentPage>
-    </MasterDetailPage.Master>
-</MasterDetailPage>
+            <Button Command="{Binding GoHomeCommand}"
+                        BackgroundColor="White"
+                        x:Name="MenuItemGoHome"
+                        TextColor="Black"
+                        Text="Home"
+                        ImageSource="ic_home.png" />
+            <Button Command="{Binding GoLogoutCommand}"
+                        x:Name="MenuItemGoLogout"
+                        BackgroundColor="White"
+                        TextColor="Black"
+                        Text="Logout"
+                        ImageSource="ic_location.png" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

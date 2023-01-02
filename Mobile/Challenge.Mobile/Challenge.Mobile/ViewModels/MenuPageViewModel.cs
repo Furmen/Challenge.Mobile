@@ -8,31 +8,26 @@ namespace Challenge.Mobile.ViewModels
     {
         private readonly ILoginService _loginService;
         public ICommand GoHomeCommand { get; set; }
-        public ICommand GoSecondCommand { get; set; }
-        public ICommand GoThirdCommand { get; set; }
+        public ICommand GoLogoutCommand { get; set; }
 
         public MenuPageViewModel()
         {
             _loginService = container.Resolve<ILoginService>();
 
             GoHomeCommand = new Command(GoHome);
-            GoSecondCommand = new Command(GoSecond);
-            GoThirdCommand = new Command(GoThird);
+            GoLogoutCommand = new Command(GoLogout);
         }
 
-        private void GoHome(object obj)
+        private async void GoHome(object obj)
         {
-            Application.Current.MainPage.Navigation.PopToRootAsync();
+            App.MasterDetailPage.IsPresented = false;
+            await App.MasterDetailPage.Detail.Navigation.PushAsync(new HomePage());
         }
 
-        private void GoSecond(object obj)
+        private async void GoLogout(object obj)
         {
-            Application.Current.MainPage.Navigation.PushAsync(new HomePage());
-        }
-
-        private void GoThird(object obj)
-        {
-            Application.Current.MainPage.Navigation.PushAsync(new LoginPage());
+            App.MasterDetailPage.IsPresented = false;
+            await App.MasterDetailPage.Detail.Navigation.PushAsync(new LoginPage());
         }
     }
 }

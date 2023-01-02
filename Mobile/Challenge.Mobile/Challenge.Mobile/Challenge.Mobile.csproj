@@ -29,17 +29,8 @@
     <Compile Update="Views\LoginPage.xaml.cs">
       <DependentUpon>LoginPage.xaml</DependentUpon>
     </Compile>
-    <Compile Update="Views\ProfilePage.xaml.cs">
-      <DependentUpon>ProfilePage.xaml</DependentUpon>
-    </Compile>
-    <Compile Update="Views\BookmarkPage.xaml.cs">
-      <DependentUpon>BookmarkPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Update="Views\TopFoodiePage.xaml.cs">
-      <DependentUpon>TopFoodiePage.xaml</DependentUpon>
-    </Compile>
-    <Compile Update="Views\DiscoveryPage.xaml.cs">
-      <DependentUpon>DiscoveryPage.xaml</DependentUpon>
+    <Compile Update="Views\MenuPageMaster.xaml.cs">
+      <DependentUpon>MenuPageMaster.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
 </Project>

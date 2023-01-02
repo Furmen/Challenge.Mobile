@@ -7,16 +7,7 @@
              x:Class="Challenge.Mobile.HomePage">
 
     <ContentPage.Content>
-        <Grid>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="Auto" />
-            </Grid.RowDefinitions>
-
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*" />
-                <ColumnDefinition Width="*" />
-            </Grid.ColumnDefinitions>
-
+        <StackLayout>
             <Label Text="{Binding HomePageName}"
                        Grid.Row="0"
                        Grid.Column="0"
@@ -26,6 +17,6 @@
                        HorizontalOptions="CenterAndExpand"
                         FontFamily="Calibri"
                        TextColor="Black" />
-        </Grid>
+        </StackLayout>
     </ContentPage.Content>
 </ContentPage>

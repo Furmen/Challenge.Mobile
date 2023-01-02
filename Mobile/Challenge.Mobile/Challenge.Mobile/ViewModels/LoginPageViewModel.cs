@@ -33,7 +33,7 @@ namespace Challenge.Mobile.ViewModels
                 DisplayErrorMessage = "";
                 User = _loginService.CleanUser();
                 this.OnPropertyChanged("User");
-                await Application.Current.MainPage.Navigation.PushModalAsync(new MenuPage());
+                await Application.Current.MainPage.Navigation.PushModalAsync(new MenuPageMaster());
             }
             this.OnPropertyChanged("DisplayErrorMessage");
         });
