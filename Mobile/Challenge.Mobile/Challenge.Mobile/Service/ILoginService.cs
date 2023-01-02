@@ -14,5 +14,7 @@ namespace Challenge.Mobile.Service
         void RegisterLogin(User user);
 
         User GetRegisteredCredentials();
+
+        void RemoveLastLoggedUserCredentials();
     }
 }

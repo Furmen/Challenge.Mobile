@@ -27,6 +27,7 @@ namespace Challenge.Mobile.ViewModels
         private async void GoLogout(object obj)
         {
             App.MasterDetailPage.IsPresented = false;
+            _loginService.RemoveLastLoggedUserCredentials();
             await App.MasterDetailPage.Detail.Navigation.PushAsync(new LoginPage());
         }
     }

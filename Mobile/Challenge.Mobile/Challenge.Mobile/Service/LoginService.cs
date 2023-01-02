@@ -49,5 +49,14 @@ namespace Challenge.Mobile.Service
                 UserName = hasUserCredentials.UserName
             } : null;
         }
+
+        public void RemoveLastLoggedUserCredentials()
+        {
+            var lastLoggerUser = GetRegisteredCredentials();
+
+            _ = lastLoggerUser is User ?
+                _conn.Table<User>().Delete(x => x.Id == lastLoggerUser.Id) :
+                throw new Exception("User credentials not found in database.");
+        }
     }
 }
